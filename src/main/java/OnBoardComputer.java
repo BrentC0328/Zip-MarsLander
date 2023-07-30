@@ -15,13 +15,15 @@ public class OnBoardComputer implements BurnStream {
         } else if( altitude > 100 || velocity > 100){
             burn = mathmaticLanding;
         } else if (velocity > 70){
-            burn = 195;
-        } else if ( velocity >= 5 ){
-            burn = 107;
-        } else if (velocity > 3){
+            burn = mathmaticLanding;
+        } else if ( velocity > 5 ){
+            burn = 106;
+        } else if (velocity >= 3){
+            burn = 102;
+        }else if (velocity > 0){
             burn = 99;
-        } else if (velocity < -3){
-            burn = 92;
+        } else if (velocity <= -3){
+            burn = 95;
         } else {
             burn = 101;
         }
