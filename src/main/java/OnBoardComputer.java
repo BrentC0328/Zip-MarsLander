@@ -1,11 +1,15 @@
 public class OnBoardComputer implements BurnStream {
 
     @Override
-    public int getNextBurn(DescentEvent status) {
-        int burn = 0;
-        
-        System.out.println(burn); /*hack!*/
-        return burn;
+    public int getNextBurn(DescentEvent status){
+//
+//        boolean dance = true;
+//
+//            while (dance) {
+//                if ()
+//            }
+
+        return 0;
     }
 
 }
