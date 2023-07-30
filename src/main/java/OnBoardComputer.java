@@ -8,18 +8,22 @@ public class OnBoardComputer implements BurnStream {
         int velocity = status.getVelocity();
         int mathmaticLanding = (velocity * velocity) / (altitude*2);
 
-        if (altitude >= 6000 && velocity >= 600){
+        if (altitude >= 4000 && velocity >= 600){
             burn = 200;
-        } else if (altitude > 4000 && velocity > 400){
-            burn = 100;
-        } else if( altitude > 300 || velocity > 160){
+        } else if (altitude > 4000 && velocity > 500){
+            burn = 100;}
+        else if( altitude > 1000 || velocity > 200){
             burn = mathmaticLanding;
         } else if (velocity > 50){
-            burn = 170;
-        } else if ( velocity > 5 ){
+            burn = 200;
+        } else if (velocity > 35){
+            burn = 135;
+        }else if ( velocity > 5 ){
             burn = 106;
         } else if (velocity >= 3){
             burn = 102;
+        }else if (velocity == 2 && altitude < 50){
+            burn = 100;
         }else if (velocity > 0){
             burn = 99;
         } else if (velocity <= -3){
