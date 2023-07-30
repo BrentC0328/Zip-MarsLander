@@ -35,11 +35,11 @@ public class Vehicle {
         String s = "";
         if (this.altitude <= 0) {
             if (this.velocity > 10) {
-                s = dead;
+                s = crashed;
                 flying = CRASHED;
             }
             if (this.velocity < 10 && this.velocity > 3) {
-                s = crashed;
+                s = dead;
                 flying = DEAD;
             }
             if (this.velocity < 3) {
