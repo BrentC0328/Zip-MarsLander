@@ -29,7 +29,8 @@ public class Vehicle {
 
     // this is initial vehicle setup
 
-    public Vehicle() {}
+    public Vehicle() {
+    }
 
     public String checkFinalStatus() {
         String s = "";
@@ -50,7 +51,8 @@ public class Vehicle {
             if (this.altitude > 0) {
                 s = emptyfuel;
                 flying = EMPTYFUEL;
-            } }
+            }
+        }
         return s;
     }
 
@@ -77,6 +79,7 @@ public class Vehicle {
         // return true if altitude is positive
         return altitude > 0;
     }
+
     public boolean outOfFuel() {
         // return true if fuel is less than or equal to zero
         return fuel <= 0;
@@ -85,7 +88,7 @@ public class Vehicle {
     public DescentEvent getStatus(int tick) {
         // create a return a new DescentEvent object
         // filled in with the state of the vehicle.
-        return new DescentEvent(tick, this.velocity, this.fuel, this.altitude,this.flying );
+        return new DescentEvent(tick, this.velocity, this.fuel, this.altitude, this.flying);
     }
 
 }

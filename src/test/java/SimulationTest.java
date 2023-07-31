@@ -19,7 +19,7 @@ public class SimulationTest {
 
     @Test
     public void runSimulationCrash() {
-        int[] burns = {0,0,0,0,0};
+        int[] burns = {0, 0, 0, 0, 0};
         BurnStream burnSource = new BurnDataStream(burns);
         Simulation game = new Simulation(new Vehicle(5000));
         int okay = game.runSimulation(burnSource);
@@ -45,8 +45,8 @@ public class SimulationTest {
             Simulation game = new Simulation(new Vehicle(Simulation.randomaltitude()));
             //Simulation game = new Simulation(new Vehicle(15000));
             int okay = game.runSimulation(burnSource);
-      Assert.assertEquals(okay, Vehicle.SUCCESS);
-            if (okay == 0){
+            Assert.assertEquals(okay, Vehicle.SUCCESS);
+            if (okay == 0) {
                 success++;
             }
         }
