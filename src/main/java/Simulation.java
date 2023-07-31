@@ -55,7 +55,7 @@ public class Simulation {
         printString(getHeader());
         while (vehicle.stillFlying()) {
             status = vehicle.getStatus(burnInterval);
-            System.out.print(status.toString()+"\t\t" + "\n");
+           System.out.print(status.toString()+"\t\t" + "\n");
             vehicle.adjustForBurn(burnSource.getNextBurn(status));
             if (vehicle.outOfFuel()) {
                 break;

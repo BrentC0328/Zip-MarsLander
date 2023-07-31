@@ -36,7 +36,7 @@ public class SimulationTest {
 
     @Test
     public void runSimulationComputerRandom() {
-        int totalTests = 100000;
+        int totalTests = 10000;
         int success = 0;
 
         for (int i = 0; i < totalTests; i++) {
@@ -45,7 +45,7 @@ public class SimulationTest {
             Simulation game = new Simulation(new Vehicle(Simulation.randomaltitude()));
             //Simulation game = new Simulation(new Vehicle(15000));
             int okay = game.runSimulation(burnSource);
-//        Assert.assertEquals(okay, Vehicle.SUCCESS);
+      Assert.assertEquals(okay, Vehicle.SUCCESS);
             if (okay == 0){
                 success++;
             }
